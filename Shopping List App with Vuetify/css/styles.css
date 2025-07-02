@@ -1,0 +1,124 @@
+/* Additional styles for Shopping List App with Vuetify 3 */
+
+/* Custom background - применяем к Vuetify элементам */
+body, .v-application {
+  
+  min-height: 100vh;
+}
+
+/* Фон для всего приложения */
+.v-application__wrap {
+  
+  min-height: 100vh;
+}
+
+/* Убираем любые фоны контейнеров */
+.v-container {
+  background: transparent !important;
+}
+
+/* Card shadows and animations */
+.v-card {
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.v-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Enhanced list item styling */
+.v-list-item {
+  transition: all 0.2s ease;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+}
+
+.v-list-item:hover {
+  background-color: rgba(0, 0, 0, 0.04) !important;
+  transform: translateX(4px);
+}
+
+/* Progress bar enhancements */
+.v-progress-linear {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button hover effects */
+.v-btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.v-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header styling */
+.v-card-title {
+  background: linear-gradient(45deg, #4CAF50, #45a049) !important;
+  backdrop-filter: blur(10px);
+}
+
+/* Form styling */
+.v-text-field .v-field {
+  border-radius: 12px !important;
+}
+
+.v-checkbox .v-selection-control__wrapper {
+  margin-right: 8px;
+}
+
+/* Chip enhancements */
+.v-chip {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* Animation for new items */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.v-list-item {
+  animation: slideInRight 0.3s ease-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .v-card-title {
+    flex-direction: column !important;
+    gap: 12px !important;
+    padding: 16px !important;
+  }
+  
+  .v-card-title h1 {
+    font-size: 1.8rem !important;
+    text-align: center;
+  }
+  
+  .v-list-item {
+    margin: 2px 4px !important;
+  }
+  
+  .v-container {
+    padding: 8px !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .v-card {
+    background-color: rgba(30, 30, 30, 0.95) !important;
+    color: #ffffff;
+  }
+} 

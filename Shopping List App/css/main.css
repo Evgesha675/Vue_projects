@@ -1,0 +1,212 @@
+/* Shopping List App Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:  url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+#shopping-list {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
+
+.header {
+  background: linear-gradient(45deg, #4CAF50, #45a049);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 2em;
+  font-weight: 300;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary, .btn-primry {
+  background: #2196F3;
+  color: white;
+}
+
+.btn-primary:hover, .btn-primry:hover {
+  background: #1976D2;
+  transform: translateY(-2px);
+}
+
+.btn-cancel {
+  background: #f44336;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #d32f2f;
+  transform: translateY(-2px);
+}
+
+.add-item-form {
+  padding: 30px;
+  background: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.add-item-form input[type="text"] {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.add-item-form input[type="text"]:focus {
+  outline: none;
+  border-color: #2196F3;
+}
+
+.add-item-form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #555;
+}
+
+.add-item-form input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff9800;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 20px 30px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+li:hover {
+  background: #f8f9fa;
+}
+
+li.priority {
+  border-left: 5px solid #ff9800;
+  background: rgba(255, 152, 0, 0.05);
+}
+
+li.strikeout span {
+  text-decoration: line-through;
+  color: #999;
+  opacity: 0.6;
+}
+
+li span {
+  flex: 1;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #f44336;
+  font-size: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.delete-btn:hover {
+  background: #f44336;
+  color: white;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+p {
+  text-align: center;
+  padding: 50px 30px;
+  color: #4CAF50;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+li {
+  animation: fadeIn 0.3s ease;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #shopping-list {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .header h1 {
+    font-size: 1.5em;
+  }
+  
+  li {
+    padding: 15px 20px;
+  }
+  
+  .add-item-form {
+    padding: 20px;
+  }
+}
