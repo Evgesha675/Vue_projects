@@ -9,5 +9,5 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src') // 👈 чтобы @ указывал на src
     }
   },
-  base: '/VueRouter/' // 👈 если твой репозиторий называется VueRouter
+  base: '/Vue_projects/' // 👈 если твой репозиторий называется VueRouter
 })
