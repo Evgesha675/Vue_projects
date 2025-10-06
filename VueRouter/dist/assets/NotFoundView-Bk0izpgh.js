@@ -1,0 +1,1 @@
+import{_ as t,c as n,a,w as s,F as c,b as e,r,o as _,d as l}from"./index-BRzwU8yU.js";const d={},u=e("h1",null,"Page not found",-1),i=e("p",null,"Bye, bye!",-1);function f(m,p){const o=r("router-link");return _(),n(c,null,[u,i,a(o,{to:"/"},{default:s(()=>[l("Back")]),_:1})],64)}const k=t(d,[["render",f]]);export{k as default};
